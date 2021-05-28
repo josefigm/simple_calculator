@@ -1,5 +1,7 @@
 # Simple Calculator
 
+![Preview of the App](https://github.com/josefigueirasm/simple_calculator/main/Preview.png?raw=true)
+
 Simple calculator is a project that aims to replicate, as the name says, a simple calculator.
 
 It uses a very simple approach to:
