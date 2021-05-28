@@ -1,6 +1,9 @@
 import {React, useState} from "react";
 import { Keyboard } from "./components/Keyboard";
 import { Screen } from "./components/Screen";
+import { Container } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { TheNavbar } from "./components/TheNavbar";
 
 const App = () =>
 {
@@ -23,10 +26,13 @@ const App = () =>
     }
 
     return(
-        <div>
+        <>
+        <TheNavbar/>
+        <Container fluid>
             <Screen value={value}/>
             <Keyboard handleValueChangue={handleValueChangue}/>
-        </div>
+        </Container>
+        </>
     );
 }
 

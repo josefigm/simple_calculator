@@ -1,9 +1,12 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 const Screen = ({value}) =>
 {
     return(
-        <label>{value}</label>
+        <Container>
+            <label>{value}</label>
+        </Container>
     );
 }
 

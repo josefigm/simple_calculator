@@ -1,4 +1,5 @@
 import React from "react";
+import { Button, ButtonGroup, Row, Col, Container } from "react-bootstrap";
 
 const Keyboard = ({handleValueChangue}) =>
 {
@@ -7,12 +8,46 @@ const Keyboard = ({handleValueChangue}) =>
         handleValueChangue(character);
     }
     return(
-        <div>
-            <button onClick={ () => {handleChangue("7")}}>7</button><button onClick={ () => {handleChangue("8")}}>8</button><button onClick={ () => {handleChangue("9")}}>9</button><br/>
-            <button onClick={ () => {handleChangue("4")}}>4</button><button onClick={ () => {handleChangue("5")}}>5</button><button onClick={ () => {handleChangue("6")}}>6</button><br/>
-            <button onClick={ () => {handleChangue("1")}}>1</button ><button onClick={ () => {handleChangue("2")}}>2</button><button onClick={ () => {handleChangue("3")}}>3</button><br/>
-            <button onClick={ () => {handleChangue("Reset")}}>Reset</button><button onClick={ () => {handleChangue("+")}}>+</button><button onClick={ () => {handleChangue("=")}}>=</button>
-        </div>
+        <Container>
+            <ButtonGroup>
+                <Button variant="light" onClick={ () => {handleChangue("7")}}>7</Button>
+                <Button variant="light" onClick={ () => {handleChangue("8")}}>8</Button>
+                <Button variant="light" onClick={ () => {handleChangue("9")}}>9</Button>
+             
+            </ButtonGroup>
+            <br/>
+            <ButtonGroup>
+                <Button variant="light" onClick={ () => {handleChangue("4")}}>4</Button>
+                <Button variant="light" onClick={ () => {handleChangue("5")}}>5</Button>
+                <Button variant="light" onClick={ () => {handleChangue("6")}}>6</Button>
+              
+            </ButtonGroup>
+            <br/>
+            <ButtonGroup>
+                <Button variant="light" onClick={ () => {handleChangue("1")}}>1</Button>
+                <Button variant="light" onClick={ () => {handleChangue("2")}}>2</Button>
+                <Button variant="light" onClick={ () => {handleChangue("3")}}>3</Button>
+               
+            </ButtonGroup>
+            <br/>
+            <ButtonGroup>
+                <Button variant="light" onClick={ () => {handleChangue("0")}}>0</Button>
+                <Button variant="light" onClick={ () => {handleChangue("(")}}>(</Button>
+                <Button variant="light" onClick={ () => {handleChangue(")")}}>)</Button>
+            </ButtonGroup>
+            <br/>
+            <ButtonGroup>
+                <Button variant="warning" onClick={ () => {handleChangue("+")}}>+</Button>
+                <Button variant="warning" onClick={ () => {handleChangue("-")}}>-</Button>
+                <Button variant="warning" onClick={ () => {handleChangue("/")}}>/</Button>
+                <Button variant="warning" onClick={ () => {handleChangue("*")}}>*</Button>
+                <Button variant="warning" onClick={ () => {handleChangue("=")}}>=</Button>
+            </ButtonGroup>
+            <br/>
+            <ButtonGroup>
+                <Button variant="secondary" onClick={ () => {handleChangue("Reset")}}>Reset</Button>
+            </ButtonGroup>
+        </Container>
     );
 }
 
