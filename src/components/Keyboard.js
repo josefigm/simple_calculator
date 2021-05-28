@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, ButtonGroup, Row, Col, Container } from "react-bootstrap";
+import { Button, ButtonGroup } from "react-bootstrap";
 
 const Keyboard = ({handleValueChangue}) =>
 {
@@ -8,7 +8,7 @@ const Keyboard = ({handleValueChangue}) =>
         handleValueChangue(character);
     }
     return(
-        <Container>
+        <div>
             <ButtonGroup>
                 <Button variant="light" onClick={ () => {handleChangue("7")}}>7</Button>
                 <Button variant="light" onClick={ () => {handleChangue("8")}}>8</Button>
@@ -47,7 +47,7 @@ const Keyboard = ({handleValueChangue}) =>
             <ButtonGroup>
                 <Button variant="secondary" onClick={ () => {handleChangue("Reset")}}>Reset</Button>
             </ButtonGroup>
-        </Container>
+        </div>
     );
 }
 

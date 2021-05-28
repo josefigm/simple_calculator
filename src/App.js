@@ -1,9 +1,8 @@
 import {React, useState} from "react";
-import { Keyboard } from "./components/Keyboard";
-import { Screen } from "./components/Screen";
-import { Container } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { TheNavbar } from "./components/TheNavbar";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { Body } from "./components/Body";
 
 const App = () =>
 {
@@ -14,6 +13,7 @@ const App = () =>
         console.log("Enter");
         if(character === "=")
         {
+            // eslint-disable-next-line
             setValue(eval(value));
             return;
         }
@@ -26,13 +26,13 @@ const App = () =>
     }
 
     return(
-        <>
-        <TheNavbar/>
-        <Container fluid>
-            <Screen value={value}/>
-            <Keyboard handleValueChangue={handleValueChangue}/>
-        </Container>
-        </>
+        <div>
+            <Header/>
+            <center>
+                <Body value={value} handleValueChangue={handleValueChangue}/>
+            </center>
+            <Footer/>
+        </div>
     );
 }
 

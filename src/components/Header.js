@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
 
-const TheNavbar = () =>
+const Header = () =>
 {
     return(
         <Navbar bg="light">
@@ -9,4 +9,4 @@ const TheNavbar = () =>
         </Navbar>
     )
 }
-export { TheNavbar };
+export { Header };
